@@ -1,0 +1,9 @@
+/home/huseyin/Masaüstü/C_Kodları/C Projects Second Semester/Account Class Project/test.cpp: In function ‘int main()’:
+/home/huseyin/Masaüstü/C_Kodları/C Projects Second Semester/Account Class Project/test.cpp:26:43: error: no matching function for call to ‘Client::setClientInfo(int&, std::__cxx11::string&, int&)’
+     c1.setClientInfo (TC, name, birth_year);
+                                           ^
+In file included from /home/huseyin/Masaüstü/C_Kodları/C Projects Second Semester/Account Class Project/test.cpp:9:0:
+/home/huseyin/Masaüstü/C_Kodları/C Projects Second Semester/Account Class Project/client.cpp:8:6: note: candidate: void Client::setClientInfo(std::__cxx11::string, std::__cxx11::string, int)
+ void Client::setClientInfo (string tc, string name, int year)
+      ^
+/home/huseyin/Masaüstü/C_Kodları/C Projects Second Semester/Account Class Project/client.cpp:8:6: note:   no known conversion for argument 1 from ‘int’ to ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’
