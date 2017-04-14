@@ -1,0 +1,20 @@
+class Student
+	createStudent()
+	showStudentDetails()
+	isSuccessful()
+	currentStatus()
+	
+class Advisor
+	createAdvisor()
+	showAdvisorDetails()
+
+class Assignment
+	assignStudentToAdvisor()
+	recordStudent()
+	recordAdvisor()
+	showRecordAdvisor(parameter)
+	
+	(bonus) deleteRecordAdvisor()
+	(bonus) deleteRecordStudent()
+	(bonus) whichSemester()
+
