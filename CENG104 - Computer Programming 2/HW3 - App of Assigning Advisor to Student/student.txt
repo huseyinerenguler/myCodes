@@ -1,10 +1,3 @@
-15050111014 Huseyin Kuzey 1 3.24 0
-15050111111 Alperen Aydogan 1 2.59 0
-123456 isim soyisim 2 3 0
-2345 isimm soyy 4 1 0
-1234 ere erer 3 3 0
-12 er er 3 3 0
-2332 t t 4 3 0
-1 bir iki 2 2 0
-234 ihih igig 4 4 0
-313131 name surnamee 3 2 0
+15050111014 Huseyin Guler 1 3.24 123
+15050111019 Alperen Aydogan 1 3.78 345
+15050111010 Fatih Gocer 1 2 345
