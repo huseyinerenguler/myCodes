@@ -1,16 +1,12 @@
-/home/huseyin/Belgeler/myCodes/CENG104 - Computer Programming 2/HW3 - App of Assigning Advisor to Student/Project.cpp: In function ‘void editStudentRecord()’:
-/home/huseyin/Belgeler/myCodes/CENG104 - Computer Programming 2/HW3 - App of Assigning Advisor to Student/Project.cpp:332:5: error: ‘control’ was not declared in this scope
-     control = 1;
-     ^
-/home/huseyin/Belgeler/myCodes/CENG104 - Computer Programming 2/HW3 - App of Assigning Advisor to Student/Project.cpp:333:9: error: ‘numberOfStudentsAssigned’ was not declared in this scope
-     if (numberOfStudentsAssigned < allowedStudentCount) // assign islemi yapilacak
-         ^
-/home/huseyin/Belgeler/myCodes/CENG104 - Computer Programming 2/HW3 - App of Assigning Advisor to Student/Project.cpp:333:36: error: ‘allowedStudentCount’ was not declared in this scope
-     if (numberOfStudentsAssigned < allowedStudentCount) // assign islemi yapilacak
-                                    ^
-/home/huseyin/Belgeler/myCodes/CENG104 - Computer Programming 2/HW3 - App of Assigning Advisor to Student/Project.cpp:342:30: error: ‘sid’ was not declared in this scope
-             if (studentId == sid)
-                              ^
-/home/huseyin/Belgeler/myCodes/CENG104 - Computer Programming 2/HW3 - App of Assigning Advisor to Student/Project.cpp:343:32: error: ‘advisorId’ was not declared in this scope
-                 assignedFlag = advisorId;
-                                ^
+/tmp/ccRgYodt.o: In function `main':
+Project.cpp:(.text+0xee): undefined reference to `Student::showStudentList()'
+Project.cpp:(.text+0xff): undefined reference to `Advisor::showAdvisorList(int)'
+Project.cpp:(.text+0x10b): undefined reference to `Student::createStudent()'
+Project.cpp:(.text+0x117): undefined reference to `Advisor::createAdvisor()'
+Project.cpp:(.text+0x123): undefined reference to `Student::showStudentDetails()'
+/tmp/ccRgYodt.o: In function `assignStudentToAdvisor(unsigned long)':
+Project.cpp:(.text+0x471): undefined reference to `Advisor::showAdvisorList(int)'
+/tmp/ccRgYodt.o: In function `__static_initialization_and_destruction_0(int, int)':
+Project.cpp:(.text+0x9f5): undefined reference to `Student::Student()'
+Project.cpp:(.text+0xa13): undefined reference to `Advisor::Advisor()'
+collect2: error: ld returned 1 exit status

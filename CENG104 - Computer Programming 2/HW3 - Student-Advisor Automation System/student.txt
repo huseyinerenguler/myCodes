@@ -1,0 +1,4 @@
+15050111 Huseyin Guler 1 2.4 111
+15050222 Fatih Gocer 1 3 222
+15050333 Alperen Aydogan 3 2.67 111
+15050444 Tugberk Coban 4 3.68 0
