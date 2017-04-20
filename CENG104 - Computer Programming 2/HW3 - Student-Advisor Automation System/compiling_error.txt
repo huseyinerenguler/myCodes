@@ -1,0 +1,14 @@
+/tmp/cc8z5lKs.o: In function `main':
+Project.cpp:(.text+0x10c): undefined reference to `Student::showStudentList()'
+Project.cpp:(.text+0x11d): undefined reference to `Advisor::showAdvisorList(int)'
+Project.cpp:(.text+0x129): undefined reference to `Student::createStudent()'
+Project.cpp:(.text+0x135): undefined reference to `Advisor::createAdvisor()'
+Project.cpp:(.text+0x141): undefined reference to `Student::showStudentDetails()'
+/tmp/cc8z5lKs.o: In function `showRecordAdvisor(unsigned long, int)':
+Project.cpp:(.text+0xcc3): undefined reference to `Advisor::showAdvisorDetails(unsigned long, int)'
+/tmp/cc8z5lKs.o: In function `assignStudentToAdvisor(unsigned long)':
+Project.cpp:(.text+0xcfb): undefined reference to `Advisor::showAdvisorList(int)'
+/tmp/cc8z5lKs.o: In function `__static_initialization_and_destruction_0(int, int)':
+Project.cpp:(.text+0x170a): undefined reference to `Student::Student()'
+Project.cpp:(.text+0x1728): undefined reference to `Advisor::Advisor()'
+collect2: error: ld returned 1 exit status

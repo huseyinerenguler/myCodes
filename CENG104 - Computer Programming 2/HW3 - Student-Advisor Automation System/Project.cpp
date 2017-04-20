@@ -70,16 +70,16 @@ void deleteRecordStudent()
 	system("cls");
 	cout << "Enter the ID of the student who you want to delete: ";
 	unsigned long ID; cin >> ID;
-	
+
 	unsigned long studentId;
     string sfirstName;
     string slastName;
     int year;
     double GPA;
-    int assignedFlag;	
-	
+    int assignedFlag;
+
 	int control = 0;
-	
+
 	ifstream file2; file2.open("student.txt", ios::in);
 	ofstream file3; file3.open("yeni.txt", ios::app);
     while(!file2.eof())
@@ -90,14 +90,14 @@ void deleteRecordStudent()
         {
         	file3 << studentId << " " << sfirstName << " " << slastName << " "
                   << year << " " << GPA << " " << assignedFlag << endl;
-		}		
-		else control = 1;	
+		}
+		else control = 1;
     }
     file2.close();
     file3.close();
 	remove("student.txt");
 	rename("yeni.txt","student.txt");
-    
+
     if (control == 0)
     	cout << "Student is not found.\n\n0 <--Menu" << endl;
     else if (control == 1)
@@ -106,7 +106,7 @@ void deleteRecordStudent()
 	{
 		cout << "Choice: "; string choice; cin >> choice;
 		if (choice == "0") break;
-	} 	
+	}
 }
 
 void deleteRecordAdvisor()
@@ -114,34 +114,34 @@ void deleteRecordAdvisor()
 	system("cls");
 	cout << "Enter the ID of the advisor who you want to delete: ";
 	unsigned long ID; cin >> ID;
-	
+
 	unsigned long advisorId; // ID of the advisor
     string firstName; // first name of the advisor
     string lastName; // last name of the advisor
     int numberOfStudentsAssigned; // number of students are assigned to advisor
-    int allowedStudentCount;	
-	
+    int allowedStudentCount;
+
 	int control = 0;
-	
+
 	ifstream file4; file4.open("advisor.txt", ios::in);
     ofstream file5; file5.open("yeni.txt", ios::app);
     while(!file4.eof())
     {
   	   	file4 >> advisorId >> firstName >> lastName >> numberOfStudentsAssigned >> allowedStudentCount;
   	   	if (file4.eof()) break;
-  	   	
+
        	if (advisorId != ID)
        	{
        		file5 << advisorId << " " << firstName << " " << lastName << " "
            	  << numberOfStudentsAssigned << " " << allowedStudentCount << endl;
 		}
-		else control = 1;   	
+		else control = 1;
 	}
 	file4.close();
 	file5.close();
 	remove("advisor.txt");
     rename("yeni.txt","advisor.txt");
-    
+
     if (control == 0)
     	cout << "Advisor is not found.\n\n0 <--Menu" << endl;
     else if (control == 1)
@@ -150,7 +150,7 @@ void deleteRecordAdvisor()
 	{
 		cout << "Choice: "; string choice; cin >> choice;
 		if (choice == "0") break;
-	} 
+	}
 }
 
 void showRecordAdvisor(unsigned long aid, int x)
@@ -177,7 +177,7 @@ void assignStudentToAdvisor(unsigned long sid)
     int year;
     double GPA;
     int assignedFlag;
-    
+
     int control = 0;
     /*********************************************************************************************/
     ifstream file1;
@@ -215,7 +215,7 @@ void assignStudentToAdvisor(unsigned long sid)
             	cout << "ERROR: Cannot assign more students to advisor." << endl;
             	cout << "Advisor ID: " << advisorId
                  	 << "\nAdvisor Name: " << firstName
-                	 << "\nAdvisor Surname: " << lastName 
+                	 << "\nAdvisor Surname: " << lastName
 					 << "\n\n0 <--Menu" << endl;
                 while (1)
 				{
@@ -225,7 +225,7 @@ void assignStudentToAdvisor(unsigned long sid)
 			}
         }
     }
-    file1.close();    
+    file1.close();
 	/*********************************************************************************************/
 	/********************   E D I T E D   A D V I S O R . T X T   ********************/
     if (control == 1)
