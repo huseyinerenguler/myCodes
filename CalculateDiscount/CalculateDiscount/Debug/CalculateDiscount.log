@@ -1,0 +1,7 @@
+﻿  CalculateDiscount.cpp
+c:\users\hüseyin kuzey güler\source\repos\calculatediscount\calculatediscount\calculatediscount.cpp(18): warning C4473: 'scanf_s' : biçim dizesi için yeterli bağımsız değişken geçirilmedi
+  c:\users\hüseyin kuzey güler\source\repos\calculatediscount\calculatediscount\calculatediscount.cpp(18): note: yer tutucular ve bunların parametreleri 2 değişen sayıda bağımsız değişken bekliyor, ancak 1 tane sağlandı
+  c:\users\hüseyin kuzey güler\source\repos\calculatediscount\calculatediscount\calculatediscount.cpp(18): note: eksik 2 değişen sayıda bağımsız değişkeni '%c' biçim dizesi için gereklidir
+  c:\users\hüseyin kuzey güler\source\repos\calculatediscount\calculatediscount\calculatediscount.cpp(18): note: bu bağımsız değişken arabellek boyutu olarak kullanılıyor
+  CalculateDiscount.vcxproj -> C:\Users\Hüseyin Kuzey Güler\source\repos\CalculateDiscount\Debug\CalculateDiscount.exe
+  CalculateDiscount.vcxproj -> C:\Users\Hüseyin Kuzey Güler\source\repos\CalculateDiscount\Debug\CalculateDiscount.pdb (Partial PDB)

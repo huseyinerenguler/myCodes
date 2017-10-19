@@ -1,0 +1,7 @@
+﻿  main.cpp
+c:\users\hüseyin kuzey güler\source\repos\calculateattendanceobligaiton\calculateattendanceobligaiton\main.cpp(14): warning C4473: 'scanf_s' : biçim dizesi için yeterli bağımsız değişken geçirilmedi
+  c:\users\hüseyin kuzey güler\source\repos\calculateattendanceobligaiton\calculateattendanceobligaiton\main.cpp(14): note: yer tutucular ve bunların parametreleri 2 değişen sayıda bağımsız değişken bekliyor, ancak 1 tane sağlandı
+  c:\users\hüseyin kuzey güler\source\repos\calculateattendanceobligaiton\calculateattendanceobligaiton\main.cpp(14): note: eksik 2 değişen sayıda bağımsız değişkeni '%c' biçim dizesi için gereklidir
+  c:\users\hüseyin kuzey güler\source\repos\calculateattendanceobligaiton\calculateattendanceobligaiton\main.cpp(14): note: bu bağımsız değişken arabellek boyutu olarak kullanılıyor
+  CalculateAttendanceObligaiton.vcxproj -> C:\Users\Hüseyin Kuzey Güler\source\repos\CalculateAttendanceObligaiton\Debug\CalculateAttendanceObligaiton.exe
+  CalculateAttendanceObligaiton.vcxproj -> C:\Users\Hüseyin Kuzey Güler\source\repos\CalculateAttendanceObligaiton\Debug\CalculateAttendanceObligaiton.pdb (Partial PDB)

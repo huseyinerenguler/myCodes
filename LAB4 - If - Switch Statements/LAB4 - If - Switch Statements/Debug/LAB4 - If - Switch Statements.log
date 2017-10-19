@@ -1,0 +1,7 @@
+﻿  CalculateAttendanceObligation.cpp
+c:\users\hüseyin kuzey güler\source\repos\lab4 - if - switch statements\lab4 - if - switch statements\calculateattendanceobligation.cpp(14): warning C4473: 'scanf_s' : biçim dizesi için yeterli bağımsız değişken geçirilmedi
+  c:\users\hüseyin kuzey güler\source\repos\lab4 - if - switch statements\lab4 - if - switch statements\calculateattendanceobligation.cpp(14): note: yer tutucular ve bunların parametreleri 2 değişen sayıda bağımsız değişken bekliyor, ancak 1 tane sağlandı
+  c:\users\hüseyin kuzey güler\source\repos\lab4 - if - switch statements\lab4 - if - switch statements\calculateattendanceobligation.cpp(14): note: eksik 2 değişen sayıda bağımsız değişkeni '%c' biçim dizesi için gereklidir
+  c:\users\hüseyin kuzey güler\source\repos\lab4 - if - switch statements\lab4 - if - switch statements\calculateattendanceobligation.cpp(14): note: bu bağımsız değişken arabellek boyutu olarak kullanılıyor
+CalculateFormula.obj : error LNK2005: _main zaten CalculateAttendanceObligation.obj üzerinde tanımlandı
+C:\Users\Hüseyin Kuzey Güler\source\repos\LAB4 - If - Switch Statements\Debug\LAB4 - If - Switch Statements.exe : fatal error LNK1169: Bir veya daha fazla birden çok kez tanımlanmış sembol bulundu

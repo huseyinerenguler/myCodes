@@ -1,0 +1,40 @@
+# Project: Compare Smart Phones
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o samsung_galaxy_s8.o lg_g6.o apple_iphone_7_plus.o xiaomi_mi_6.o
+LINKOBJ  = main.o samsung_galaxy_s8.o lg_g6.o apple_iphone_7_plus.o xiaomi_mi_6.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = "Compare Smart Phones.exe"
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+samsung_galaxy_s8.o: samsung_galaxy_s8.cpp
+	$(CPP) -c samsung_galaxy_s8.cpp -o samsung_galaxy_s8.o $(CXXFLAGS)
+
+lg_g6.o: lg_g6.cpp
+	$(CPP) -c lg_g6.cpp -o lg_g6.o $(CXXFLAGS)
+
+apple_iphone_7_plus.o: apple_iphone_7_plus.cpp
+	$(CPP) -c apple_iphone_7_plus.cpp -o apple_iphone_7_plus.o $(CXXFLAGS)
+
+xiaomi_mi_6.o: xiaomi_mi_6.cpp
+	$(CPP) -c xiaomi_mi_6.cpp -o xiaomi_mi_6.o $(CXXFLAGS)
