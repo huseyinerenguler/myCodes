@@ -6,112 +6,171 @@ public class Question_1 {
 
 	public static void main (String[] args) {
 		
-		input = new Scanner(System.in); // create input object
+		input = new Scanner(System.in); // input object
 		
-		String[] inputString = new String[2];
-		char[][][] inputStringSituations = new char[][][] { { {'a','b','c','d','e'} , {'0','0','0','0','0'} },
-															{ {'a','b','c','d','e'} , {'0','0','0','0','0'} } };
+		char[] requirements = {'a', 'b', 'c', 'd', 'e'};
+		int totalStrings = 2;
+		String[] inputString = new String[totalStrings];
 		
-															
-		inputStringSituations[0][0][0] = input.nextLine().charAt(0);													
-															
-		System.out.print("Enter first string: ");
-		inputString[0] = input.nextLine();
+		String str;
+		for (int x = 0; x < totalStrings; x++) {
+			
+			System.out.print("Enter " + (x+1) + ". string: ");
+			
+			str = input.nextLine().toLowerCase();
+			
+			if (controlLetters(str, requirements)) {
+				inputString[x] = str;
+			}
+			
+			else {
+				x--;
+			}
+		}
 		
-		System.out.print("Enter second string: ");
-		inputString[1] = input.nextLine();
+		char[][][] inputStringSituations = determineStringSituations(inputString, requirements);
 		
-		char ch;
+		/* FORMULA IS,
+		 * 									number of distinct letters in common
+		 * 			  __________________________________________________________________________________
+		 * 				(number of distinct letters in FIRST) + (number of distinct letters in SECOND)
+		 *  										  _________________
+		 *  												  2
+		 */
+		String commonLetters = findCommonLetters(inputStringSituations);
+		String distinctLettersInFýrst = findDistinctLetters(inputString[0]);
+		String distinctLettersInSecond = findDistinctLetters(inputString[1]);
+		
+		double result = (commonLetters.length() / ((distinctLettersInFýrst.length() + distinctLettersInSecond.length()) / 2.0));
+				
+		System.out.printf("Result: %.2f", result);
+	}
+	
+	public static char[][][] determineStringSituations (String[] inputString, char[] requirements) {
+		
+		/* this array keeps string in first dimension, letters in second dimension
+		 * and letters numbers in third dimension.
+		 *  Example: JavaTest -> (a,2)(b,0)(c,0)(d,0)(e,1) */
+		char[][][] inputStringSituations = new char[inputString.length][requirements.length][requirements.length];
 		
 		for (int x = 0; x < inputString.length; x++) {
 			
-			for (int index = 0; index < inputString[0].length(); index++) {
+			for (int z = 0; z < requirements.length; z++) {
 				
-				ch = inputString[x].charAt(index);
+				inputStringSituations[x][0][z] = requirements[z];
+				inputStringSituations[x][1][z] = '0';
+			}
+		}
+													
+		char ch; // keep characters in the string
+		
+		// loop for the determine all string situations 
+		for (int x = 0; x < inputString.length; x++) {
+			
+			// loop for the processing every character in the string
+			for (int index = 0; index < inputString[x].length(); index++) {
 				
+				ch = inputString[x].charAt(index); // assign a character from input string according to index number 
+				
+				// loop for the compare a character and situations and if exists increment its numbers
 				for (int z = 0; z < inputStringSituations[0][0].length; z++) {
 					
+					// if the character matches, the number of that characters increases
 					if (ch == inputStringSituations[x][0][z]) {
 						
-						inputStringSituations[x][1][z]++;
+						inputStringSituations[x][1][z]++; // increment process
 						break;
 					}
 				}
 			}
 		}
 		
-		// her kelime için harfler alýndý, formul uygulanacak sadece.
+		return inputStringSituations;
+	}
+	
+	// this function returns true if a word that entered meets the requirements, OR it does not, returns false
+	public static boolean controlLetters (String word, char[] requirements) {
 		
+		boolean control = false;
 		
-		
-		
-		
-		System.out.print(inputStringSituations[0][0][0]);
-		System.out.println(inputStringSituations[0][1][0]);
-		
-		System.out.print(inputStringSituations[0][0][1]);
-		System.out.println(inputStringSituations[0][1][1]);
-		
-		System.out.print(inputStringSituations[0][0][2]);
-		System.out.println(inputStringSituations[0][1][2]);
-		
-		System.out.print(inputStringSituations[0][0][3]);
-		System.out.println(inputStringSituations[0][1][3]);
-		
-		System.out.print(inputStringSituations[0][0][4]);
-		System.out.println(inputStringSituations[0][1][4]);
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		/*
-		String firstString; // first string that given from user
-		String secondString; // second string that given from user
-		
-		System.out.print("Enter first string: ");
-		firstString = input.nextLine();
-		
-		System.out.print("Enter second string: ");
-		secondString = input.nextLine();
-				
-		char[][] firstStringSituation = new char[][] { {'a','b','c','d','e'} , {'0'} };
-		char[][] secondStringSituation = new char[][] { {'a','b','c','d','e'} , {'0'} };		
-		char ch;
-		
-		for (int x = 0; x < firstString.length(); x++) {
+		for (int x = 0; x < word.length(); x++) {
 			
-			ch = firstString.charAt(x);
+			control = false;
 			
-			for (int y = 0; y < firstStringSituation[0].length; y++) {
+			for (int y = 0; y < requirements.length; y++) {
 				
-				if (ch == firstStringSituation[0][y]) {
+				if (word.charAt(x) == requirements[y]) {
 					
-					firstStringSituation[0][y]++;
+					control = true;
+					break;
+				}
+				
+			}
+			
+			if (control == false) {
+				
+				controlLettersErrorMessage(requirements);
+				return false;
+			}
+		}
+		
+		return true;
+	}
+	
+	public static void controlLettersErrorMessage (char[] requirements) {
+		
+		System.out.print("ERROR!! Please use only \"");
+		
+		for (char ch: requirements) {
+			
+			System.out.print(" " + ch);
+		}
+		
+		System.out.println(" \"\n");
+	}
+	
+	public static String findCommonLetters (char[][][] inputStringSituations) {
+		
+		String commonLetters = "";
+		
+		for (int x = 0; x < 1; x++) {
+			
+			for (int z = 0; z < inputStringSituations[0][1].length; z++) {
+				
+				if (inputStringSituations[x][1][z] > '0') {
+					
+					if (inputStringSituations[x+1][1][z] > '0') {
+						
+						commonLetters += inputStringSituations[x][0][z];
+					}
 				}
 			}
 		}
 		
-		for (int x = 0; x < secondString.length(); x++) {
+		return commonLetters;
+	}
+	
+	public static String findDistinctLetters (String word) {
+		
+		String distinctLetters = "" + word.charAt(0);
+		boolean control = false;
+		
+		for (int x = 1; x < word.length(); x++) {
 			
-			ch = secondString.charAt(x);
+			control = false;
 			
-			for (int y = 0; y < secondStringSituation[0].length; y++) {
+			for (int y = 0; y < distinctLetters.length(); y++) {
 				
-				if (ch == secondStringSituation[0][y]) {
-					
-					secondStringSituation[0][y]++;
+				if (word.charAt(x) == distinctLetters.charAt(y)) {
+					control = true;
 				}
 			}
+			
+			if (control == false) {
+				distinctLetters += word.charAt(x);
+			}
 		}
-			*/
 		
+		return distinctLetters;
 	}
 }
