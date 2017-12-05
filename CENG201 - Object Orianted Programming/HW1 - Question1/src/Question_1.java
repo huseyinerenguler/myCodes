@@ -20,7 +20,7 @@ public class Question_1 {
 		char[] requirements = {'a', 'b', 'c', 'd', 'e'};
 		
 		// this variable keeps the number of strings to gets from the user
-		int totalStrings = 2;
+		int totalStrings = 10;
 		
 		// this array keeps the strings that are gets from the user
 		String[] inputString = getString(totalStrings, requirements);

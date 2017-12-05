@@ -3,7 +3,9 @@
  * @since	2017-11-06 
  */
 
-import java.util.Scanner;
+import java.util.*;
+
+import javax.swing.JOptionPane;
 
 public class Question_2 {
 
@@ -16,6 +18,8 @@ public class Question_2 {
 		String firstString;
 		System.out.print("Enter the first name: ");
 		firstString = input.nextLine();
+		
+		JOptionPane.showMessageDialog(null, "sa");
 		
 		String secondString;
 		System.out.print("Enter the second name: ");
