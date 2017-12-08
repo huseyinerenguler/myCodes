@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>HW2 - Find Same Words On Different Books</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>HW2 - Project Requirements.docx</name>
+			<type>1</type>
+			<location>D:/myCodes/CENG201 - Object Orianted Programming/HW2 - Find Same Words On Different Books/HW2 - Project Requirements.docx</location>
+		</link>
+	</linkedResources>
+</projectDescription>
