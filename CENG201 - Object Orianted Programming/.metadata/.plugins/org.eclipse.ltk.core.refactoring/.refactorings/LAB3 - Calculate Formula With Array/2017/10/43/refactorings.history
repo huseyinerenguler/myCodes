@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;LAB3_1&apos; to &apos;CalculateFormulaWithArray&apos;&#x0D;&#x0A;- Original project: &apos;LAB3 - Calculate Formula With Array&apos;&#x0D;&#x0A;- Original element: &apos;LAB3_1&apos;&#x0D;&#x0A;- Renamed element: &apos;CalculateFormulaWithArray&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;LAB3_1&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{LAB3_1.java[LAB3_1" matchStrategy="1" name="CalculateFormulaWithArray" qualified="false" references="true" similarDeclarations="false" stamp="1508492551093" textual="false" version="1.0"/>
-</session>

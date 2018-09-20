@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> JS Homework </title> 
+	</head>
+
+	<body onload="time()">
+	
+		<font size="4" color="black">
+			Hüseyin Eren Güler<br>
+			15050111014<br>
+		</font>
+			
+		<font face="Courier" size="6" color="red">
+			<strong> <p id="title" align="center">Remaining Time Today</p> </strong>
+		</font>
+		
+		<font size="3" color="black">
+			<p id="currentTime" align="center"> </p>
+			<p id="remainingTime" align="center"> </p> <br>
+			
+			<p id="hour" align="center"> </p>
+			<p id="minute" align="center"> </p>
+			<p id="second" align="center"> </p>
+		</font>
+		
+		<script>		
+			function time() {
+		
+				var today = new Date();
+				var hour = today.getHours();
+				var minute = today.getMinutes();
+				var second = today.getSeconds();
+															  
+				document.getElementById("hour").innerHTML = "-".repeat(hour) + "H".repeat(23-hour);
+				document.getElementById("minute").innerHTML = "-".repeat(minute) + "m".repeat(60-minute);
+				document.getElementById("second").innerHTML = "-".repeat(second) + "s".repeat(60-second);
+				
+				document.getElementById("remainingTime").innerHTML = "You have <b>" + (23-hour) + "</b> hours, <b>" + (60-minute) +
+															  "</b> minutes and <b>" + (60-second) + "</b> seconds remaining.";
+				if (second < 10) second = "0" + second;
+				if (minute < 10) minute = "0" + minute;
+				if (hour < 10) hour = "0" + hour;
+					
+				document.getElementById("currentTime").innerHTML = "Current time is <b>" + hour + ":" + minute + ":" + second + "</b>";
+			
+				setInterval(time, 100);
+			}
+		</script>
+	</body>
+</html>
